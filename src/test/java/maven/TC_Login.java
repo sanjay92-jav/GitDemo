@@ -15,9 +15,11 @@ public class TC_Login {
 		driver.manage().window().maximize();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
-//		driver.findElement(By.cssSelector("[name='username']")).sendKeys("Admin");
-//		driver.findElement(By.cssSelector("[name='password']")).sendKeys("admin123");
-//		driver.findElement(By.cssSelector("[type='submit']")).click();
+		driver.findElement(By.cssSelector("[name='username']")).sendKeys("Admin");
+		driver.findElement(By.cssSelector("[name='password']")).sendKeys("admin123");
+		driver.findElement(By.cssSelector("[type='submit']")).click();
+		
+		System.out.println(driver.getTitle());
 		
 		Assert.assertEquals(driver.getTitle(),"OrangeHRM");
 		driver.close();
